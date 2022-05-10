@@ -46,7 +46,7 @@ Risistemare i Jsnack fatti insieme questa mattina.
 	…etc*/
 
     const array=["parola1-1","parola2-1","parola3-1","parola4-1","parola5-1"];
-    const sottoarray=["parola2-1","parola2-2","parola3-2"];
+    const sottoarray=["parola2-1","parola2-2"];
 
     for(let i = 0; i < array.length; i++){
     const node = document.createElement("li");
@@ -57,14 +57,17 @@ Risistemare i Jsnack fatti insieme questa mattina.
 
     document.getElementById("myList").appendChild(node);
 
-    for(let j = 0; j < sottoarray.length; j++){
-        const node_two = document.createElement("li");
+    for (let j = 0; j < sottoarray.length; j++) {
 
-        const textnode_two = document.createTextNode(sottoarray[j]);
-    
-        node_two.appendChild(textnode_two);
-    
-        document.getElementById("secondlist").appendChild(node_two);
-    }
+        const provaul = document.createElement("ul");
+        const node2 = document.createElement("li");
+        const textnode2 = document.createTextNode(sottoarray[j]);
+
+        node2.appendChild(provaul);
+        provaul.appendChild(textnode2);
+
+        document.getElementById("myList").appendChild(node2);
+
+    };
     
 }
